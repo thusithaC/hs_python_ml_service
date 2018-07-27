@@ -4,14 +4,15 @@ from django.urls import path
 from django.contrib import admin
 admin.autodiscover()
 
-import hello.views
+import base_view.views
+import transaction_service.learning
 
 # Examples:
-# url(r'^$', 'gettingstarted.views.home', name='home'),
+# url(r'^$', 'service_init.views.home', name='home'),
 # url(r'^blog/', include('blog.urls')),
 
 urlpatterns = [
-    url(r'^$', hello.views.index, name='index'),
-    url(r'^db', hello.views.db, name='db'),
+    url(r'^$', base_view.views.index, name='index'),
     path('admin/', admin.site.urls),
+    path('services/', transaction_service.learning.test),
 ]
