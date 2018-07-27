@@ -62,6 +62,9 @@
         "urllib3": {
             "version": "==1.23"
         },
+        "idna": {
+            "version": "==2.6"
+        },
         "psycopg2": {
             "hashes": [
                 "sha256:594aa9a095de16614f703d759e10c018bdffeafce2921b8e80a0e8a0ebbc12e5",
