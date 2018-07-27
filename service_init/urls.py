@@ -15,4 +15,5 @@ urlpatterns = [
     url(r'^$', base_view.views.index, name='index'),
     path('admin/', admin.site.urls),
     path('services/', transaction_service.learning.test),
+    path('services/transactions', transaction_service.learning.transactions)
 ]
