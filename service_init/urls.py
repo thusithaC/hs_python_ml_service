@@ -15,5 +15,7 @@ urlpatterns = [
     url(r'^$', base_view.views.index, name='index'),
     path('admin/', admin.site.urls),
     path('services/', transaction_service.learning.test),
-    path('services/transactions', transaction_service.learning.transactions)
+    path('services/transactions', transaction_service.learning.transactions),
+    path('services/traingeneric', transaction_service.learning.train_generic_model),
+    path('services/predgeneric', transaction_service.learning.get_generic_prediction)
 ]

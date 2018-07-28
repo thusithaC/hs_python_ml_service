@@ -1,3 +1,7 @@
 requests
 urllib3
 idna
+numpy
+scipy
+sklearn
+pandas
