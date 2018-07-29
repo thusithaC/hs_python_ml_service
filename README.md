@@ -8,12 +8,10 @@ https://github.com/heroku/python-getting-started
 Make sure you have Python [installed properly](http://install.python-guide.org). Also, install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) and [Postgres](https://devcenter.heroku.com/articles/heroku-postgresql#local-setup).
 
 ```sh
-$ git clone git@github.com:heroku/python-getting-started.git
-$ cd python-getting-started
+$ git clone https://github.com/thusithaC/hs_python_ml_service.git
+$ cd hs_python_ml_service
 
 $ pipenv install
-
-$ createdb python_getting_started
 
 $ python manage.py migrate
 $ python manage.py collectstatic
@@ -32,7 +30,7 @@ $ git push heroku master
 $ heroku run python manage.py migrate
 $ heroku open
 ```
-This is deployed in https://pure-bastion-26477.herokuapp.com
+This is already deployed in https://pure-bastion-26477.herokuapp.com
 
 Example usage :
 ```python
