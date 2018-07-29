@@ -1,8 +1,7 @@
-# Python: Getting Started
+# Transactions Prediction service 
 
-A barebones Django app, which can easily be deployed to Heroku.
-
-This application supports the [Getting Started with Python on Heroku](https://devcenter.heroku.com/articles/getting-started-with-python) article - check it out.
+Based on a template using Django/python 
+https://github.com/heroku/python-getting-started
 
 ## Running Locally
 
@@ -33,12 +32,26 @@ $ git push heroku master
 $ heroku run python manage.py migrate
 $ heroku open
 ```
-or
+This is deployed in https://pure-bastion-26477.herokuapp.com
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+Example usage :
+```python
+# learning and prediction example. 
 
-## Documentation
+ML_URL = 'https://pure-bastion-26477.herokuapp.com'
+TRAIN_URL = ML_URL + '/services/traingeneric'
+TEST_URL = ML_URL + '/services/predgeneric'
 
-For more information about using Python on Heroku, see these Dev Center articles:
+if 1: 
+    r = sendGet(train_url, None)
+    if r.status_code == 200:
+        print("Training Successfull")
+    else:
+        print("Error! is the services up?")
 
-- [Python on Heroku](https://devcenter.heroku.com/categories/python)
+if 1: 
+    test_data = '[{"transaction": {"transactionDay":800, "category": "AA"}}, {"transaction": {"transactionDay":850, "category": "GG"}}]'
+    test_data_json = json.loads(test_data)
+    r = sendPostJson(TEST_URL, test_data_json)
+    jprint(r)
+```
